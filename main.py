@@ -6,13 +6,13 @@ This is a detailed example using almost every command of the API
 import telebot
 from telebot import types
 import time
-import keyboards, token
+import keyboards, my_token
 
 markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
 markup.row('a', 'v')
 markup.row('c', 'd', 'e')
 
-TOKEN = token.token
+TOKEN = my_token.token
 
 knownUsers = []  # todo: save these in a file,
 userStep = {}  # so they won't reset every time the bot restarts
