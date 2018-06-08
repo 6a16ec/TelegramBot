@@ -13,9 +13,23 @@ keyboards[0] = [["main"],
 				["Я освободился!", "Я занят"]]
 
 
-class replyKeyboard:
+class workKeyboard:
 	def get(name):
 		kb = types.ReplyKeyboardMarkup(resize_keyboard = True)
+		for keyboard in keyboards:
+			if(keyboard[0] == name):
+				for line_number in range(1, len(keyboard)):
+					kb.row(*keyboard[line_number])
+
+# keyboard = types.InlineKeyboardMarkup()
+#     callback_button = types.InlineKeyboardButton(text="Нажми меня", callback_data="test")
+#     keyboard.add(callback_button)
+#     bot.send_message(message.chat.id, "Я – сообщение из обычного режима", reply_markup=keyboard)
+
+
+class messageKeyboard:
+	def get(name):
+		kb = types.InlineKeyboardMarkup()
 		for keyboard in keyboards:
 			if(keyboard[0] == name):
 				for line_number in range(1, len(keyboard)):

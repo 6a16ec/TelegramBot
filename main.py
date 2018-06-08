@@ -7,7 +7,7 @@ import telebot
 from telebot import types
 import time
 import  my_token
-from keyboards import replyKeyboard
+from keyboards import workKeyboard
 
 markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
 markup.row('a', 'v')
@@ -133,6 +133,6 @@ def command_text_hi(m):
 @bot.message_handler(func=lambda message: True, content_types=['text'])
 def command_default(m):
     # this is the standard reply to a normal message
-    bot.send_message(m.chat.id, "I don't understand \"" + m.text + "\"\nMaybe try the help page at /help", reply_markup = keyboards.get("main"))
+    bot.send_message(m.chat.id, "I don't understand \"" + m.text + "\"\nMaybe try the help page at /help", reply_markup = workKeyboard.get("main"))
 
 bot.polling()
