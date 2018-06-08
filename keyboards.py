@@ -15,8 +15,10 @@ keyboards[0] = [["main"],
 
 class workKeyboard:
 	def get(name):
+		print(name)
 		kb = types.ReplyKeyboardMarkup(resize_keyboard = True)
 		for keyboard in keyboards:
+			print(keyboard)
 			if(keyboard[0] == name):
 				for line_number in range(1, len(keyboard)):
 					kb.row(*keyboard[line_number])
