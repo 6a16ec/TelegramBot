@@ -40,7 +40,7 @@ class messageKeyboard:
 						buttons.append(types.InlineKeyboardButton(text = button, callback_data = button))
 						kb.add(*buttons)
 
-		kb.add(types.ReplyKeyboardRemove())
+		# kb.add(types.ReplyKeyboardRemove())
 		return kb
 
 
