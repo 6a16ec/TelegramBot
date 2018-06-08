@@ -20,6 +20,7 @@ class workKeyboard:
 			if(keyboard[0] == name):
 				for line_number in range(1, len(keyboard)):
 					kb.row(*keyboard[line_number])
+		return kb
 
 # keyboard = types.InlineKeyboardMarkup()
 #     callback_button = types.InlineKeyboardButton(text="Нажми меня", callback_data="test")
@@ -36,5 +37,8 @@ class messageKeyboard:
 					buttons = []
 					for button in keyboard[line_number]:
 						buttons.append(types.InlineKeyboardButton(text = button, callback_data = button))
+						kb.add(*buttons)
+		return kb
+
 
 # main.row(*array)
