@@ -22,6 +22,8 @@ class workKeyboard:
 				for line_number in range(1, len(keyboard)):
 					kb.row(*keyboard[line_number])
 		return kb
+	def close(bot, chat_id, message_id):
+        bot.edit_message_text(chat_id = chat_id, message_id = message_id, reply_markup = types.ReplyKeyboardRemove())
 
 # keyboard = types.InlineKeyboardMarkup()
 #     callback_button = types.InlineKeyboardButton(text="Нажми меня", callback_data="test")
