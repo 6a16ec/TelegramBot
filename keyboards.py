@@ -1,6 +1,7 @@
 import telebot
 from telebot import types
 
-main = types.InlineKeyboardMarkup()
+main = types.ReplyKeyboardMarkup(resize_keyboard = True)
 main.row('Создать задачу')
-main.row('Прочее')
+main.row('Поменять расписание')
+main.row('Я освободился!', 'Я занят!')
