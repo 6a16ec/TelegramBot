@@ -20,6 +20,7 @@ class workKeyboard:
 			if(keyboard[0] == name):
 				for line_number in range(1, len(keyboard)):
 					kb.row(*keyboard[line_number])
+					print(*keyboard[line_number])
 		return kb
 
 # keyboard = types.InlineKeyboardMarkup()
