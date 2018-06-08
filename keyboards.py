@@ -18,11 +18,9 @@ class workKeyboard:
 		print(name)
 		kb = types.ReplyKeyboardMarkup(resize_keyboard = True)
 		for keyboard in keyboards:
-			print(keyboard)
 			if(keyboard[0][0] == name):
 				for line_number in range(1, len(keyboard)):
 					kb.row(*keyboard[line_number])
-					print(keyboard[line_number])
 		return kb
 
 # keyboard = types.InlineKeyboardMarkup()
@@ -35,7 +33,7 @@ class messageKeyboard:
 	def get(name):
 		kb = types.InlineKeyboardMarkup()
 		for keyboard in keyboards:
-			if(keyboard[0] == name):
+			if(keyboard[0][0] == name):
 				for line_number in range(1, len(keyboard)):
 					buttons = []
 					for button in keyboard[line_number]:
