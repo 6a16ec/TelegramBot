@@ -33,5 +33,8 @@ class messageKeyboard:
 		for keyboard in keyboards:
 			if(keyboard[0] == name):
 				for line_number in range(1, len(keyboard)):
-					kb.row(*keyboard[line_number])
+					buttons = []
+					for button in keyboard[line_number]:
+						buttons.append(types.InlineKeyboardButton(text = button, callback_data = button))
+
 # main.row(*array)
