@@ -6,7 +6,8 @@ This is a detailed example using almost every command of the API
 import telebot
 from telebot import types
 import time
-import keyboards, my_token
+import  my_token
+from keyboards import replyKeyboard
 
 markup = types.ReplyKeyboardMarkup(resize_keyboard = True)
 markup.row('a', 'v')
