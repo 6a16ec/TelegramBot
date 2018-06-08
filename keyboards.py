@@ -39,6 +39,8 @@ class messageKeyboard:
 					for button in keyboard[line_number]:
 						buttons.append(types.InlineKeyboardButton(text = button, callback_data = button))
 						kb.add(*buttons)
+
+		telebot.ReplyKeyboardRemove()
 		return kb
 
 
