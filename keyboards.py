@@ -7,7 +7,10 @@ a = [[1, 2, 3], [4, 5, 6]]
 
 keyboards = [1]
 
-keyboards.append([["main"],["Создать задачу"], ["Поменять расписание"],["Я освободился!", "Я занят"]])
+keyboards[0] = [["main"],
+				["Создать задачу"], 
+				["Поменять расписание"],
+				["Я освободился!", "Я занят"]]
 
 
 class workKeyboard:
@@ -16,7 +19,7 @@ class workKeyboard:
 		kb = types.ReplyKeyboardMarkup(resize_keyboard = True)
 		for keyboard in keyboards:
 			print(keyboard)
-			if(keyboard[0] == name):
+			if(keyboard[0][0] == name):
 				for line_number in range(1, len(keyboard)):
 					kb.row(*keyboard[line_number])
 					print(keyboard[line_number])
